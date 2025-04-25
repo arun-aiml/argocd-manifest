@@ -2,16 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris
+  name: cloudservice
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: tetris
+      app: web
   template:
     metadata:
       labels:
-        app: tetris
+        app: web
     spec:
       containers:
       - name: tetris
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tetris-service
+  name: cloudservice-service
 spec:
   selector:
-    app: tetris
+    app: web
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
