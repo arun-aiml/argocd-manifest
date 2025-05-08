@@ -14,7 +14,7 @@ spec:
         app: web
     spec:
       containers:
-      - name: tetris
+      - name: web
         image: arun2sr/cloudservice:v1
         ports:
         - containerPort: 3000   # Use port 3000
