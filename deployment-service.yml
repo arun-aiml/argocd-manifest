@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: cloudservice
 spec:
-  replicas: 4
+  replicas: 6
   selector:
     matchLabels:
       app: web
